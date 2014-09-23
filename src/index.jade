@@ -16,6 +16,7 @@ html.no-js
     meta(name='viewport', content='width=device-width, initial-scale=1')
     // Place favicon.ico and apple-touch-icon.png in the root directory
     link(rel='stylesheet', href='stylesheets/vendor/reset/normalize.css')
+    link(rel='stylesheet', href='stylesheets/vendor/animate.css')
     link(rel='stylesheet', href='stylesheets/style.css')
     script(src='js/vendor/modernizr.custom.js')
   body
@@ -29,7 +30,7 @@ html.no-js
     // Add your site or application content here
     .container
       #bl-main.bl-main
-        section
+        section#about-section
           .bl-box
             h2.bl-icon.bl-icon-about About 
           .bl-content
@@ -55,7 +56,23 @@ html.no-js
               li(data-panel="panel-4")
                 a(href="#")
                   img(src="images/4.jpg")
+              li(data-panel="panel-5")
+                a(href="#")
+                  img(src="images/5.jpg")
+              li(data-panel="panel-6")
+                a(href="#")
+                  img(src="images/6.jpg")
           span.bl-icon.bl-icon-close            
+        #face.face.animated.tada
+          .container
+            .inner
+              .img
+              #eyes
+                svg.eyes(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="87.858px" height="14.6px" viewBox="0 0 87.858 14.6" enable-background="new 0 0 87.858 14.6" xml:space="preserve")
+                  g
+                    circle(fill="#231F20" cx="6.968" cy="6.967" r="6.968")
+                    circle(fill="#231F20" cx="80.89" cy="7.631" r="6.968")
         //- end of level 1
         //- start panel thing
         .bl-panel-items#bl-panel-work-items
@@ -81,6 +98,22 @@ html.no-js
               img(src="images/4.jpg")
               h3 Hello
               p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, consequatur tempore facere atque molestias possimus alias quos recusandae hic odio, harum quae amet maiores itaque officiis, qui iste? Eligendi, aliquam.
+          div(data-panel="panel-5")
+            div
+              img(src="images/5.jpg")
+              h3 Hello
+              p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, consequatur tempore facere atque molestias possimus alias quos recusandae hic odio, harum quae amet maiores itaque officiis, qui iste? Eligendi, aliquam.
+          div(data-panel="panel-6")
+            div
+              img(src="images/6.jpg")
+              h3 Hello
+              p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, consequatur tempore facere atque molestias possimus alias quos recusandae hic odio, harum quae amet maiores itaque officiis, qui iste? Eligendi, aliquam.
+          div(data-panel="panel-7")
+            div
+              img(src="images/7.jpg")
+              h3 Hello
+              p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, consequatur tempore facere atque molestias possimus alias quos recusandae hic odio, harum quae amet maiores itaque officiis, qui iste? Eligendi, aliquam.
+
           nav
             span.bl-next-work 
               |&gt; Next Project

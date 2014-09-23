@@ -5,7 +5,51 @@
 @import foundation/base
 // @import foundation/helpers
 // @import foundation/tools
+.face
+  // position: absolute
+  // left: 50%
+  // top: 30%
+  // margin-left: -150px
+  z-index: 1
+  max-width: 300px
+  margin: 0 auto
+  margin-top: 100px
+  +transition(.3s)
+  .container
+    width: 100%
+    padding-top: 100%
+    position: relative
+    // box-sizing: border-box
+    .inner
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    .img
+      background-image: url("../images/face.svg")
+      background-size: cover
 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      padding-top: 100%
+      box-sizing: border-box
+#eyes
+  position: absolute
+  top: 46%
+  left: 34%
+  +transition(.5s)
+  &.lookleft
+    +transform(translateX(-5px) translateY(5px))
+  &.lookright
+    +transform(translateX(5px) translateY(5px))
+  &.lookdown
+    +transform( translateY(7px))
+.face-hide
+  +transform(scale(0))
+  opacity: 0
 .container
   height: 100%
 
@@ -86,7 +130,7 @@
   -webkit-font-smoothing: antialiased
   &:before
     display: block
-    font-size: 3em
+    font-size: 2.5em
     margin-bottom: 10px
 .bl-icon-about:before
   content: "\e000"
@@ -163,8 +207,10 @@ div.bl-panel-items
     margin-left: -108px
     opacity: 0
     +transition(opacity 0.2s ease-in-out 0.5s)
+  .bl-icon-close
+    font-size: .8em
   &> div
-    background-color: #3ba5db
+    background-color: $c-panel-bg
     z-index: 0
     opacity: 0
     +transform(translateY(0))

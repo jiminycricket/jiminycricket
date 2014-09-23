@@ -22,6 +22,7 @@ Boxlayout = (->
   transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ]
   supportTransitions = Modernizr.csstransitions
   currentWorkPanel = void
+  face = $('#face')
 
   function init
     console.log "init"
@@ -36,6 +37,8 @@ Boxlayout = (->
           console.log "open"
           $section.data('open', true).addClass('bl-expand bl-expand-top')
           $el.addClass('bl-expand-item')
+          face.removeClass("tada")
+          face.addClass('face-hide')
         return )
       .find('span.bl-icon-close').on('click', ->
         console.log "close"
@@ -50,6 +53,9 @@ Boxlayout = (->
           return)
         $section.removeClass('bl-expand-top') if  !supportTransitions
         $el.removeClass('bl-expand-item')
+        face.removeClass('face-hide')
+        # face.addClass('tada')
+
         return false)
     )
 # // clicking on a work item: the current section scales down and the respective work panel slides up
@@ -97,9 +103,32 @@ Boxlayout = (->
       $workPanels.eq( currentWorkPanel ).removeClass( 'bl-show-work' )
       return)
 
-
-
-
+    worksection = $('#bl-work-section')
+    aboutsection = $('#about-section')
+    eyes = $('#eyes')
+    worksection.on('mouseover', ->
+      console.log "work in"
+      eyes.addClass('lookright')
+      # console.log eyes
+      )
+    worksection.on('mouseleave', ->
+      console.log "work out"
+      eyes.removeClass('lookright')
+      )
+    aboutsection.on('mouseover', ->
+      console.log "about in"
+      eyes.addClass('lookleft')
+      )
+    aboutsection.on('mouseleave', ->
+      console.log "about out"
+      eyes.removeClass('lookleft')
+      )
+    $('.inner').on('mouseover', ->
+      eyes.addClass('lookdown')
+      )
+    $('.inner').on('mouseleave', ->
+      eyes.removeClass('lookdown')
+      )
 
     return
 
