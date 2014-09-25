@@ -5,6 +5,23 @@
 @import foundation/base
 // @import foundation/helpers
 // @import foundation/tools
+a
+  color: #aaa
+  font-size: 1.5em
+  font-weight: 700
+  +transition(.5s)
+  &:hover
+    color: #ccc
+    letter-spacing: 5px
+*
+  &::-webkit-scrollbar
+    width: 1em
+  &::-webkit-scrollbar-track
+    color: white
+.border
+  border: 8px solid rgba(white, 0.8)
+img.border.floatnone
+  float: none
 .face
   // position: absolute
   // left: 50%
@@ -216,12 +233,13 @@ div.bl-panel-items
     +transform(translateY(0))
     +transition(transform 0.5s ease-in-out, opacity 0s linear 0.5s)
   & > div > div
-    width: 60%
+    width: 75%
     margin: 0 auto
     opacity: 1
     bottom: 90px
     top: 90px
     pointer-events: auto
+    text-align: center
     h3
       font-size: 2.4em
       font-weight: 300
