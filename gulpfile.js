@@ -86,9 +86,9 @@ gulp.task('compass', function() {
     //   errorHandler: onError
     // }))
     .pipe(compass({
-      // config_file: './config.rb',
-      css: './build/stylesheets',
-      sass: './src/sass',
+      config_file: 'config.rb',
+      css: 'build/stylesheets',
+      sass: 'src/sass',
       require: ['susy']
     })).on('error' , function (err) {  
     console.log('//////////////////////////////');
@@ -193,8 +193,9 @@ gulp.task('watch', function() {
 });
 
 // Livereload
+var watchfolder = ['./build/**/*.html','./build/**/*.js' ] 
 gulp.task('livereload',['watch', 'browser-sync'], function() {
-  gulp.watch('./build/**', function(file) {
+  gulp.watch( watchfolder, function(file) {
     if(file.type === 'changed')
       return reload(file.path);
   });
@@ -204,27 +205,28 @@ gulp.task('bs-reload', function () {
   reload();
 });
 
-// Copy necessary files to _pubilc
+// Copy necessary files to _public
 gulp.task('copy', ['build'], function() {
-  var buildDir = [
-    './src/assets/**',
-    './build/images/**',
-    './build/load/**',
-    './build/stylesheets/**',
-    './build/views/**/*.html',
-    './build/notavailable.html',
-    './build/js/*.js'
-  ];
-  var files = gulp.src(buildDir, {base: './build/'})
+  // var buildDir = [
+  //   './src/assets/**',
+  //   './build/images/**',
+  //   './build/load/**',
+  //   './build/stylesheets/**',
+  //   './build/views/**/*.html',
+  //   './build/notavailable.html',
+  //   './build/js/**/*.js'
+  // ];
+  var files = gulp.src('./build/**', {base: './build/'})
     .pipe(gulp.dest('./_public/'));
+  
+  // var mini = gulp.src('./build/index.html')
+  //   .pipe(htmlreplace({
+  //     js: 'js/dist/app.min.js'
+  //   }))
+  //   .pipe(gulp.dest('./_public'));
 
-  var mini = gulp.src('./build/index.html')
-    .pipe(htmlreplace({
-      js: 'js/dist/app.min.js'
-    }))
-    .pipe(gulp.dest('./_public'));
-
-  return merge(files, mini);
+  // return merge(files, mini);
+  return files;
 });
 
 // Compile to HTML, CSS, JavaScript
@@ -232,7 +234,7 @@ gulp.task('compile', ['clean', 'get-lib', 'ls', 'compass', 'jade']);
 
 gulp.task('build',['compile']);
 gulp.task('default',['build', 'livereload']);
-// gulp.task('publish',['build', 'scripts', 'copy']);
+gulp.task('publish',['build', 'copy']);
 
 
 
