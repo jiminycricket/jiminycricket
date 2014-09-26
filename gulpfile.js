@@ -86,7 +86,7 @@ gulp.task('compass', function() {
     //   errorHandler: onError
     // }))
     .pipe(compass({
-      config_file: 'config.rb',
+      // config_file: 'config.rb',
       css: 'build/stylesheets',
       sass: 'src/sass',
       require: ['susy']
