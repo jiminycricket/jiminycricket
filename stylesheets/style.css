@@ -49,7 +49,7 @@ a:hover {
 /* line 8, ../../src/sass/style.sass */
 a {
   color: #aaaaaa;
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: 700;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -59,7 +59,7 @@ a {
 /* line 13, ../../src/sass/style.sass */
 a:hover {
   color: #cccccc;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 /* line 17, ../../src/sass/style.sass */
@@ -301,9 +301,9 @@ img.border.floatnone {
 /* line 173, ../../src/sass/style.sass */
 .bl-content p {
   margin: 0 auto;
-  padding-bottom: 15px;
-  font-size: 1.7em;
-  line-height: 1.8;
+  padding-bottom: 5px;
+  font-size: 1.3em;
+  line-height: 1.6;
 }
 /* line 178, ../../src/sass/style.sass */
 .bl-content h2 {
@@ -580,4 +580,50 @@ section.bl-expand .bl-content, section.bl-expand .bl-icon-close {
   clear: both;
   content: "";
   display: table;
+}
+
+/* line 321, ../../src/sass/style.sass */
+.aboutMe {
+  width: 70%;
+}
+
+/* line 326, ../../src/sass/style.sass */
+#about-section h3 {
+  font-size: 2em;
+  color: #aaaabb;
+  line-height: 1.2em;
+}
+/* line 330, ../../src/sass/style.sass */
+#about-section a {
+  color: #dada19;
+  font-size: 1em;
+  line-height: 1rem;
+  padding-left: 2em;
+}
+
+/* line 336, ../../src/sass/style.sass */
+.question p {
+  padding-left: 2em;
+}
+/* line 338, ../../src/sass/style.sass */
+.question span {
+  font-size: 0.8em;
+  color: #aaaaaa;
+}
+
+/* line 342, ../../src/sass/style.sass */
+.others p {
+  padding-left: 2em;
+}
+/* line 344, ../../src/sass/style.sass */
+.others span {
+  padding-left: 0.5em;
+  color: #aaaabb;
+}
+/* line 347, ../../src/sass/style.sass */
+.others .skill {
+  font-size: 1.7em;
+  width: 70%;
+  margin: 0;
+  line-height: 2;
 }
