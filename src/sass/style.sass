@@ -55,15 +55,25 @@ img.border.floatnone
       box-sizing: border-box
 #eyes
   position: absolute
-  top: 46%
+  @media screen and (max-width: $b-middle)
+    top: 44.5%
+  top: 47%
   left: 34%
   +transition(.5s)
   &.lookleft
-    +transform(translateX(-5px) translateY(5px))
+    +transform(translateX(-5px))
+    @media screen and (max-width: $b-middle)
+      +transform(translateX(-2px))
   &.lookright
-    +transform(translateX(5px) translateY(5px))
+    +transform(translateX(5px))
+    @media screen and (max-width: $b-middle)
+      +transform(translateX(2px))
   &.lookdown
-    +transform( translateY(7px))
+    +transform( translateY(4px))
+    @media screen and (max-width: $b-middle)
+      +transform( translateY(.5px))
+    @media screen and (max-width: $b-small)
+      +transform( translateY(.5px))
 .face-hide
   +transform(scale(0))
   opacity: 0
@@ -162,6 +172,9 @@ img.border.floatnone
   position: absolute
   top: 60px
   left: 30px
+  @media screen and (max-width: $b-small)
+    left: 20px
+
   right: 30px
   bottom: 30px
   padding: 0 20px
@@ -198,6 +211,10 @@ img.border.floatnone
       display: inline-block
       width: 20%
       margin: 1%
+      @media screen and (max-width: $b-middle)
+        width: 30%
+      @media screen and (max-width: $b-small)
+        width: 100%
       a
         display: block
         padding: 0
@@ -234,6 +251,9 @@ div.bl-panel-items
     +transition(transform 0.5s ease-in-out, opacity 0s linear 0.5s)
   & > div > div
     width: 75%
+    @media screen and (max-width: $b-small)
+      width: 90%
+      top: 20px
     margin: 0 auto
     opacity: 1
     bottom: 90px
@@ -320,6 +340,8 @@ section.bl-expand
     display: table
 .aboutMe
   width: 70%
+  @media screen and (max-width: $b-small)
+    width: 100%
   // font-size: 1rem
 
 #about-section
@@ -332,15 +354,25 @@ section.bl-expand
     font-size: 1em
     line-height: 1rem
     padding-left: 2em
+    @media screen and (max-width: $b-small)
+      padding-left: 0em
+      font-size: .5em
 .question
+  padding-left: 2em
+  @media screen and (max-width: $b-small)
+    padding-left: 0em
   p
     padding-left: 2em
+    @media screen and (max-width: $b-small)
+      padding-left: 0em
   span
     font-size: 0.8em
     color: #aaa
 .others
   p
     padding-left: 2em
+    @media screen and (max-width: $b-small)
+      padding-left: 0em
   span
     padding-left: 0.5em
     color: $c-about-h3  
@@ -349,3 +381,11 @@ section.bl-expand
     width: 70%
     margin: 0
     line-height: 2
+
+@media screen and (max-width: $b-middle)
+  #face
+    width: 130px
+    margin-top: 30px
+  #eyes
+    svg
+      width: 40px
