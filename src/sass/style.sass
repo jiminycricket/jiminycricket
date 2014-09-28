@@ -37,6 +37,9 @@ img.border.floatnone
     padding-top: 100%
     position: relative
     // box-sizing: border-box
+    h3
+      text-align: center
+      font-size: 3em
     .inner
       position: absolute
       top: 0
@@ -56,8 +59,8 @@ img.border.floatnone
 #eyes
   position: absolute
   @media screen and (max-width: $b-middle)
-    top: 44.5%
-  top: 47%
+    top: 18%
+  top: 32.5%
   left: 34%
   +transition(.5s)
   &.lookleft
@@ -106,7 +109,25 @@ img.border.floatnone
       opacity: 0
       pointer-events: none
       &:before
-        content: "\e005"
+        content: "\e001"
+.bl-icon-facebook, .bl-icon-pinterst, .bl-icon-github, .bl-icon-instagram
+  padding-left: 2em
+  display: inline-block 
+  +transition(.5s)
+  &:hover
+    color: $c-about-a
+.bl-icon-facebook
+  &:before
+    content: "\e600"
+.bl-icon-pinterst
+  &:before
+    content: "\e604"
+.bl-icon-github
+  &:before
+    content: "\e602"
+.bl-icon-instagram
+  &:before
+    content: "\e601"
 .bl-box
   position: relative
   width: 100%
@@ -145,6 +166,10 @@ img.border.floatnone
     letter-spacing: 20px
     font-weight: 700
     text-transform: uppercase
+    margin-top: 20%
+    @media screen and (max-width: $b-middle)
+      font-size: 1rem
+      letter-spacing: 10px
 .bl-icon
   font-family: 'icomoon'
   speak: none
@@ -159,10 +184,8 @@ img.border.floatnone
     display: block
     font-size: 2.5em
     margin-bottom: 10px
-.bl-icon-about:before
-  content: "\e000"
-.bl-icon-works:before
-  content: "\e001"
+.bl-icon-about, .bl-icon-works
+
 .bl-icon-close:before
   content: "\e005"
 
