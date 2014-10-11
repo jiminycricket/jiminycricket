@@ -1,16 +1,410 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <link rel="stylesheet" href="stylesheets/vendor/reset/normalize.css"/>
-  <link rel="stylesheet" href="stylesheets/style.css"/>
-  <link rel="stylesheet" href="stylesheets/rollerblade.css"/>
-  <title>Document</title>
-</head>
-<body>
-  <h1>Self Dance</h1>
-  <div id="doll" class="doll"><img src="images/1.jpg" alt="doll" class="doll-img rollerblade-img"/></div>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/rollerblade.min.js"></script>
-  <script src="js/app/app.js"></script>
-</body>
+<!--if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7  
+-->
+<!--if IE 7html.no-js.lt-ie9.lt-ie8  
+-->
+<!--if IE 8html.no-js.lt-ie9  
+-->
+<!-- [if gt IE 8] <!-->
+<html class="no-js">
+  <!-- <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jiminy Cricket</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <link rel="stylesheet" href="stylesheets/vendor/reset/normalize.css">
+    <link rel="stylesheet" href="stylesheets/vendor/animate.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="js/vendor/modernizr.custom.js"></script>
+  </head>
+  <body>
+    <!--if lt IE 7
+    p.browsehappy
+      | You are using an 
+      strong outdated
+      |  browser. Please 
+      a(href='http://browsehappy.com/') upgrade your browser
+      |  to improve your experience.
+    -->
+    <!-- Add your site or application content here-->
+    <div class="preloader">
+      <div class="img">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+         viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+          <g id="path-face">
+              <path id="path-face1" fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M70.013,116.467c0-9.571,1.307-101.979,76.646-101.979
+                c0,0,77.091-5.238,79.259,98.232c0,98.616-24.82,140.643-36.581,153.126c-11.758,12.482-23.082,17.891-38.759,17.891
+                C134.9,283.737,70.013,271.254,70.013,116.467z"/>
+              <ellipse fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" cx="135.689" cy="213.233" rx="6.375" ry="4.528"/>
+              <ellipse fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" cx="160.895" cy="213.233" rx="6.323" ry="4.492"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M169.279,196.37c-11.297-10.942-9.99-52.096-20.225-52.096
+                c-0.225,0-0.439,0.035-0.647,0.085c-0.206-0.051-0.417-0.085-0.643-0.085c-10.234,0-8.927,41.152-20.222,52.096h-0.017
+                c0,0-10.865,17.144,1.737,20.409c0,0-0.518-6.688,4.513-7.978c0.404-0.09,0.831-0.153,1.289-0.185c0,0,7.458,0.763,7.458,4.898
+                l0.001,0.003c-0.022,0.821,1.598,3.29,4.402,3.719c0.264,0.053,0.536,0.09,0.822,0.09l0,0h1.305h0.001
+                c0.286,0,0.558-0.037,0.822-0.09c2.801-0.429,4.423-2.896,4.402-3.717l0.002-0.005c0-4.137,7.457-4.898,7.457-4.898
+                c0.459,0.03,0.885,0.095,1.289,0.185c5.029,1.289,4.312,7.962,4.312,7.962C179.939,213.498,169.279,196.37,169.279,196.37z"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M123.532,151.086c0,0-2.786-10.898-14.286-10.898
+                s-16.585,9.478-16.585,10.188s7.72,6.906,14.465,6.906s15.048-1.07,16.521-5.863"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M169.775,151.086c0,0,2.787-10.898,14.287-10.898
+                s16.584,9.478,16.584,10.188s-7.72,6.906-14.465,6.906c-6.744,0-15.048-1.07-16.521-5.863"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M167.751,150.46c0,0,11.789-25.998,33.688-1.089
+                  c0,0,0.381,1.198,0,2.587c0,0-8.687-10.208-17.365-10.208c-8.68,0-11.758,4.654-13.393,10.697
+                  C169.703,155.552,165.88,152.476,167.751,150.46z"/>
+                <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M200.646,151.086c0,0-16.98,13.367-31.353,1.688"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M125.401,150.075c0,0-11.789-25.996-33.688-1.088
+                  c0,0-0.381,1.197,0,2.585c0,0,8.686-10.208,17.366-10.208c8.679,0,11.758,4.654,13.391,10.697
+                  C123.449,155.166,127.271,152.091,125.401,150.075z"/>
+                <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M92.504,150.703c0,0,16.982,13.363,31.354,1.686"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M116.814,239.541c0,0,11.473,2.735,15.474-0.285
+                c4.001-3.022,6.206-6.615,9.717-6.615c3.51,0,3.647,1.715,7.703,1.715h0.225c4.057,0,4.193-1.715,7.706-1.715
+                c3.51,0,5.715,3.593,9.715,6.615c4.002,3.021,14.289,0.733,14.289,0.733s-7.793,4.654-24.203,0.408c0,0-2.941-1.307-7.797-1.307
+                c-4.859,0-7.309,2.123-17.843,3.593C121.265,244.155,120.367,239.541,116.814,239.541z"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M163.454,242.869c-10.206-3.352-13.485-2.082-13.485-2.082
+                s-0.052,0.058-0.136,0.157c-0.086-0.101-0.137-0.157-0.137-0.157s-3.278-1.27-13.485,2.082c-2.196,0.821-0.696,5.053,5.955,4.199
+                c6.641-0.851,3.013-1.442,7.666-1.442c4.654,0,1.027,0.593,7.667,1.442C164.15,247.922,165.65,243.691,163.454,242.869z"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M217.307,200.392c0,0,12.342,7.124,20.692-22.08
+                c8.351-29.208-9.837-37.927-13.937-23.58"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M78.749,199.253c0,0-11.876,6.555-20.069-22.695
+                c-8.194-29.25,10.04-37.872,14.063-23.504"/>
+          </g>
+          <g id="path-hair">
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M224.523,153.899c1.797-8.962,3.984-50.837-1.654-70.639
+                c-6.682-28.522-24.855-68.79-74.266-68.79c-0.134,0-0.263,0.007-0.397,0.007c-0.134,0-0.263-0.007-0.396-0.007
+                c-49.373,0-67.558,40.207-74.25,68.725c-4.248,17.85-3.364,61.367-2.277,66.146c0,0,2.338-49.206,10.154-68.236
+                c2.722-6.613,22.815-19.083,27.949-25.434c0.097-0.121,0.199-0.217,0.297-0.33c0.177,0.11,0.354,0.208,0.532,0.33
+                c0,0,20.743,6.911,36.11,7.573c0.127,0.01,0.254,0.01,0.383,0.017c0.183,0.006,0.365,0.015,0.546,0.019
+                c0.185,0.006,0.369,0.021,0.557,0.021c0.13,0,0.266-0.005,0.396-0.006c0.131,0.001,0.268,0.006,0.397,0.006
+                c0.187,0,0.372-0.015,0.557-0.021c0.179-0.004,0.364-0.013,0.545-0.019c0.128-0.008,0.255-0.007,0.382-0.017
+                c15.369-0.662,36.111-7.573,36.111-7.573c0.178-0.122,0.354-0.22,0.531-0.33c0.098,0.113,0.199,0.209,0.297,0.33
+                c5.133,6.35,22.92,15.514,27.947,25.434C222.791,100.135,224.523,153.899,224.523,153.899z"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M171.16,125.363c0,0-4.693,2.967-2.945,8.462
+                c1.748,5.493,34.803-2.362,34.803-2.362s4.578-2.077,4.02-3.106c-0.563-1.028-9.279-6.138-9.279-6.138s-23.447,1.682-25.73,3.043"
+                />
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M124.716,124.925c0,0,4.772,2.837,3.175,8.377
+                c-1.596,5.54-34.854-1.412-34.854-1.412s-4.631-1.951-4.1-2.995c0.531-1.044,9.106-6.39,9.106-6.39s23.485,1.042,25.805,2.34"/>
+          </g>
+          <g id="path-glasses">
+            <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M137.868,146.668c-3.379-2.564-11.365-11.185-28.491-11.185
+              s-25.645,5.476-28.791,7.806c-3.145,2.33-8.048,4.311-8.048,4.311l-0.738,3.466v2.475c0,0,2.481,2.681,4.579,4.66
+              c2.097,1.979,3.598,18.641,17.111,26.097s24.714,2.329,33.219-2.913c8.505-5.242,13.45-23.649,13.45-23.649
+              S141.245,149.23,137.868,146.668z M133.157,168.686c-1.631,2.913-8.621,19.225-28.542,16.077
+              c-18.058-4.545-22.135-16.31-23.416-27.028c0,0-1.98-7.222,5.591-12.931c0,0,7.223-7.457,20.971-6.175
+              c13.747,1.282,24.582,6.689,26.329,14.296C135.837,160.531,134.788,165.772,133.157,168.686z"/>
+            <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M73.8,150.046v2.795c0,0-6.145,0.468-6.378-0.815
+              c-0.232-1.279-0.713-3.027,2.316-2.796C72.766,149.464,73.8,150.046,73.8,150.046z"/>
+            <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M156.233,157.734c0,0,4.992,18.407,13.498,23.649
+              c8.504,5.242,19.797,10.369,33.312,2.913c13.514-7.456,14.956-24.117,17.054-26.098c2.098-1.979,4.704-4.659,4.704-4.659v-2.475
+              l-0.864-3.467c0,0-5.15-1.98-8.297-4.311s-11.604-7.806-28.729-7.806c-17.123,0-25.082,8.62-28.459,11.185
+              C155.071,149.23,156.233,157.734,156.233,157.734z M162.259,152.925c1.747-7.606,12.581-13.015,26.329-14.296
+              c13.747-1.282,20.969,6.175,20.969,6.175c7.573,5.709,5.593,12.931,5.593,12.931c-1.281,10.72-5.358,22.483-23.416,27.028
+              c-19.922,3.146-26.912-13.164-28.543-16.077S160.511,160.531,162.259,152.925z"/>
+            <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M221.8,150.046v2.795c0,0,6.52,0.468,6.752-0.815
+              c0.232-1.279,0.525-3.027-2.504-2.796C223.021,149.464,221.8,150.046,221.8,150.046z"/>
+            <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M138.399,150.396c-2.097-0.35-2.213,3.262-0.933,3.961
+              c1.397,0.816,2.797-1.164,3.729-1.747c2.795-1.748,7.105-1.515,10.135-0.698c1.515,0.467,3.378,1.863,5.009,1.516
+              c1.515-0.35,2.563-2.564,1.399-4.078c-1.748-2.097-7.457-1.165-9.903-1.165c-1.864,0-13.165-0.466-10.136,4.077"/>
+          </g>
+          <g id="path-eyes">
+              <circle fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" cx="149.893" cy="150.162" r="143.705"/>
+              <circle fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" cx="113.03" cy="149.829" r="6.968"/>
+              <path fill="none" stroke-width="2" stroke="#9a9a9a" stroke-miterlimit="10" d="M187.059,150.492c0,3.849-3.121,6.97-6.967,6.97
+                c-3.852,0-6.969-3.121-6.969-6.97s3.117-6.968,6.969-6.968C183.938,143.525,187.059,146.644,187.059,150.492z"/>
+          </g>
+        </svg>
+        
+        
+        
+      </div>
+    </div>
+    <div class="container">
+      <div id="bl-main" class="bl-main">
+        <section id="about-section">
+          <div class="bl-box">
+            <h2 class="bl-icon-about">About </h2>
+          </div>
+          <div class="bl-content">
+            <div class="aboutMe">
+              <h2>About me</h2>
+              <p>
+                 
+                 台北北投人。追求結合自己的興趣，並可以帶給別人歡樂的工作，喜歡設計，長期以來一直以做出自己的東西為目標而努力。
+              </p>
+              <p>沒有音樂很難工作，假日去海邊或是親近大自然，看電影，什麼都看</p>
+              <p>一年前發現網路世界起了大變化，想要自己的作品可以感染更多人，或是幫助別人的作品讓全世界的人知道，這是最棒的媒介，於是一頭栽進 HTML, CSS, Javascript 的世界。</p>
+            </div>
+            <div class="others">   
+              <h2>Experience</h2>
+              <p>
+                 
+                Infine art & communicate: <span>web marketing</span>
+              </p>
+              <p>
+                 
+                SOHO: <span>Graphic Design</span>
+              </p>
+              <p>
+                 
+                DB Skimboard Taiwan: <span>Visual Designer </span>
+              </p>
+              <p>
+                 
+                Deansoft: <span>Internship as front end</span>
+              </p>
+              <h2>Skill</h2>
+              <p class="skill">Illustrator, Photoshop, UI, HTML, CSS, Bootstrap, Compass, Sass, Gulp, jQuery, Angular, Git, coffee making, skimboard</p>
+              <h2>Interesting</h2>
+              <p class="skill">UX, UI, Motion Graphic, Typography, Scullptor, Movie, Woodworking, Psychology, Skate, Filming, Snowboarding</p>
+            </div><a href="https://www.facebook.com/ooooopz" target="_blank">
+              <div class="bl-icon bl-icon-facebook"></div></a><a href="http://www.pinterest.com/ooooopz/" target="_blank">
+              <div class="bl-icon bl-icon-pinterst"></div></a><a href="https://github.com/jiminycricket" target="_blank">
+              <div class="bl-icon bl-icon-github"> </div></a><a href="http://instagram.com/ooooopz" target="_blank"> 
+              <div class="bl-icon bl-icon-instagram"> </div></a>
+          </div><span class="bl-icon bl-icon-close"></span>
+        </section>
+        <section id="bl-work-section"> 
+          <div class="bl-box">
+            <h2 class="bl-icon-works">Works</h2>
+          </div>
+          <div class="bl-content">
+            <h2>My Works</h2>
+            <ul id="bl-work-items">
+              <li data-panel="panel-1"><a href="#"><img src="images/1.jpg"></a></li>
+              <li data-panel="panel-2"><a href="#"><img src="images/2.jpg"></a></li>
+              <li data-panel="panel-3"><a href="#"><img src="images/3.jpg"></a></li>
+              <li data-panel="panel-4"><a href="#"><img src="images/4.jpg"></a></li>
+              <li data-panel="panel-5"><a href="#"><img src="images/5.jpg"></a></li>
+              <li data-panel="panel-6"><a href="#"><img src="images/6.jpg"></a></li>
+              <li data-panel="panel-7"><a href="#"><img src="images/7.jpg"></a></li>
+              <li data-panel="panel-8"><a href="#"><img src="images/8.jpg"></a></li>
+              <li data-panel="panel-9"><a href="#"><img src="images/9.jpg"></a></li>
+            </ul>
+          </div><span class="bl-icon bl-icon-close">           </span>
+        </section>
+        <div id="face" class="face animated">
+          <div class="container">
+            <h3>Jimmy Tien</h3>
+            <div class="inner">
+              <div class="img">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+                    viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                <g id="Layer_1">
+                  <circle fill="#D1D1D1" stroke="#FFFFFF" stroke-width="9" stroke-miterlimit="10" cx="150" cy="149.83" r="143.705"/>
+                </g>
+                <g id="Layer_2">
+                  <path fill="#F9B5A4" d="M70.013,116.467c0-9.571,1.307-97.367,76.646-97.367c0,0,79.695,3.744,79.259,93.621
+                    c0,98.616-24.821,140.643-36.581,153.126c-11.758,12.482-23.082,17.891-38.759,17.891C134.9,283.737,70.013,271.254,70.013,116.467
+                    z"/>
+                  <ellipse fill="#231F20" cx="135.689" cy="213.233" rx="8.138" ry="5.781"/>
+                  <ellipse fill="#231F20" cx="160.894" cy="213.233" rx="8.139" ry="5.781"/>
+                  <path fill="#C56857" d="M169.279,196.37c-11.297-10.942-9.99-52.095-20.225-52.095c-0.225,0-0.439,0.035-0.647,0.085
+                    c-0.206-0.051-0.417-0.085-0.643-0.085c-10.234,0-8.927,41.152-20.222,52.095h-0.017c0,0-10.865,17.144,1.737,20.41
+                    c0,0-0.518-6.688,4.513-7.978c0.404-0.09,0.831-0.153,1.289-0.185c0,0,7.458,0.763,7.458,4.899l0.001,0.003
+                    c-0.022,0.821,1.598,3.29,4.402,3.719c0.264,0.052,0.536,0.089,0.822,0.089h0h1.305h0.001c0.286,0,0.558-0.037,0.822-0.089
+                    c2.801-0.429,4.423-2.896,4.403-3.717l0.002-0.005c0-4.137,7.456-4.899,7.456-4.899c0.459,0.031,0.885,0.095,1.29,0.185
+                    c5.029,1.289,4.311,7.962,4.311,7.962C179.94,213.498,169.279,196.37,169.279,196.37z"/>
+                </g>
+                <g id="Layer_5">
+                  <path fill="#FFFFFF" d="M123.532,151.086c0,0-2.786-10.898-14.286-10.898s-16.585,9.477-16.585,10.188s7.72,6.906,14.465,6.906
+                    s15.048-1.07,16.521-5.863"/>
+                  <path fill="#FFFFFF" d="M169.776,151.086c0,0,2.786-10.898,14.286-10.898s16.585,9.477,16.585,10.188s-7.72,6.906-14.465,6.906
+                    s-15.048-1.07-16.521-5.863"/>
+                  <g>
+                    <path fill="#231F20" d="M167.751,150.46c0,0,11.789-25.998,33.689-1.089c0,0,0.381,1.199,0,2.587c0,0-8.687-10.208-17.366-10.208
+                      s-11.758,4.655-13.392,10.698C169.703,155.552,165.88,152.476,167.751,150.46z"/>
+                    <path fill="none" stroke="#231F20" stroke-miterlimit="10" d="M200.647,151.086c0,0-16.981,13.367-31.353,1.689"/>
+                  </g>
+                  <g>
+                    <path fill="#231F20" d="M125.401,150.075c0,0-11.789-25.996-33.688-1.087c0,0-0.381,1.197,0,2.585c0,0,8.686-10.208,17.366-10.208
+                      c8.679,0,11.758,4.654,13.391,10.697C123.449,155.166,127.271,152.091,125.401,150.075z"/>
+                    <path fill="none" stroke="#231F20" stroke-miterlimit="10" d="M92.504,150.703c0,0,16.982,13.364,31.354,1.686"/>
+                  </g>
+                </g>
+                <g id="Layer_3">
+                  <path fill="#231F20" d="M224.327,153.9c1.798-8.963,3.985-50.838-1.653-70.64c-6.682-28.522-24.855-68.79-74.267-68.79
+                    c-0.134,0-0.263,0.007-0.397,0.007s-0.263-0.007-0.397-0.007c-49.373,0-67.558,40.207-74.25,68.725
+                    c-4.248,17.849-3.364,61.367-2.277,66.146c0,0,2.338-49.206,10.154-68.236c2.722-6.614,22.815-19.083,27.949-25.434
+                    c0.097-0.121,0.199-0.217,0.297-0.33c0.177,0.11,0.354,0.208,0.532,0.33c0,0,20.743,6.911,36.11,7.573
+                    c0.127,0.01,0.254,0.01,0.383,0.017c0.182,0.006,0.365,0.015,0.545,0.019c0.185,0.005,0.37,0.021,0.557,0.021
+                    c0.13,0,0.266-0.005,0.397-0.006c0.13,0.001,0.267,0.006,0.397,0.006c0.187,0,0.372-0.015,0.557-0.021
+                    c0.179-0.004,0.364-0.013,0.545-0.019c0.128-0.008,0.255-0.007,0.382-0.017c15.368-0.662,36.11-7.573,36.11-7.573
+                    c0.178-0.122,0.354-0.22,0.532-0.33c0.097,0.113,0.199,0.209,0.296,0.33c5.134,6.35,22.92,15.514,27.948,25.434
+                    C222.596,100.136,224.327,153.9,224.327,153.9z"/>
+                  <path fill="#231F20" d="M170.965,125.364c0,0-4.693,2.966-2.945,8.461c1.747,5.494,34.802-2.362,34.802-2.362
+                    s4.578-2.077,4.019-3.106c-0.561-1.029-9.278-6.138-9.278-6.138s-23.448,1.682-25.731,3.043"/>
+                  <path fill="#231F20" d="M124.52,124.925c0,0,4.772,2.837,3.175,8.377c-1.596,5.54-34.854-1.412-34.854-1.412
+                    s-4.631-1.951-4.1-2.995c0.531-1.044,9.106-6.39,9.106-6.39s23.485,1.042,25.805,2.34"/>
+                </g>
+                <g id="Layer_4">
+                  <path fill="#C56857" d="M116.814,239.541c0,0,11.473,2.736,15.474-0.285c4.001-3.022,6.206-6.615,9.717-6.615
+                    c3.51,0,3.647,1.715,7.703,1.715h0.225c4.057,0,4.193-1.715,7.705-1.715c3.51,0,5.716,3.593,9.716,6.615
+                    c4.001,3.021,14.289,0.734,14.289,0.734s-7.793,4.654-24.204,0.408c0,0-2.941-1.307-7.797-1.307c-4.859,0-7.309,2.123-17.843,3.593
+                    C121.265,244.155,120.367,239.541,116.814,239.541z"/>
+                  <path fill="#C56857" d="M163.454,242.869c-10.206-3.351-13.485-2.082-13.485-2.082s-0.052,0.058-0.136,0.158
+                    c-0.086-0.101-0.137-0.158-0.137-0.158s-3.278-1.269-13.485,2.082c-2.196,0.822-0.696,5.053,5.955,4.2
+                    c6.641-0.851,3.013-1.443,7.666-1.443c4.655,0,1.027,0.593,7.667,1.443C164.15,247.922,165.65,243.691,163.454,242.869z"/>
+                  <path fill="#FFBE95" d="M217.307,200.392c0,0,12.341,7.124,20.692-22.08c8.35-29.208-9.837-37.927-13.937-23.58"/>
+                  <path fill="#FFBE95" d="M79.252,198.75c0,0-12.379,7.058-20.572-22.192c-8.194-29.25,10.04-37.872,14.063-23.504"/>
+                </g>
+                <g id="Layer_6">
+                  <g>
+                    <g>
+                      <path fill="#202830" d="M138.068,146.667c-3.379-2.564-11.365-11.184-28.491-11.184c-17.126,0-25.645,5.475-28.791,7.805
+                        c-3.145,2.33-8.048,4.311-8.048,4.311L72,151.065v2.474c0,0,2.481,2.681,4.579,4.66c2.097,1.979,3.598,18.641,17.111,26.097
+                        s24.714,2.329,33.219-2.913s13.451-23.649,13.451-23.649S141.446,149.229,138.068,146.667z M133.357,168.685
+                        c-1.631,2.913-8.621,19.224-28.542,16.077c-18.058-4.545-22.135-16.31-23.416-27.028c0,0-1.98-7.222,5.591-12.931
+                        c0,0,7.223-7.457,20.971-6.175c13.747,1.282,24.582,6.69,26.329,14.296C136.037,160.53,134.988,165.771,133.357,168.685z"/>
+                      <path fill="#9B5C00" d="M74,150.045v2.795c0,0-6.145,0.468-6.378-0.815c-0.232-1.28-0.713-3.028,2.316-2.796
+                        C72.966,149.463,74,150.045,74,150.045z"/>
+                    </g>
+                    <g>
+                      <path fill="#202830" d="M156.434,157.733c0,0,4.992,18.407,13.497,23.649s19.798,10.369,33.312,2.913
+                        s14.956-24.117,17.054-26.097c2.097-1.979,4.704-4.66,4.704-4.66v-2.474l-0.864-3.467c0,0-5.15-1.981-8.297-4.311
+                        c-3.146-2.33-11.603-7.805-28.729-7.805c-17.123,0-25.082,8.62-28.459,11.184C155.271,149.229,156.434,157.733,156.434,157.733z
+                         M162.459,152.924c1.747-7.606,12.581-13.015,26.329-14.296c13.747-1.282,20.969,6.175,20.969,6.175
+                        c7.573,5.709,5.593,12.931,5.593,12.931c-1.281,10.719-5.359,22.483-23.417,27.028c-19.921,3.146-26.911-13.164-28.542-16.077
+                        S160.711,160.53,162.459,152.924z"/>
+                      <path fill="#9B5C00" d="M222,150.045v2.795c0,0,6.52,0.468,6.752-0.815c0.232-1.28,0.525-3.028-2.504-2.796
+                        C223.22,149.463,222,150.045,222,150.045z"/>
+                    </g>
+                    <g>
+                      <path fill="#9B5C00" d="M138.6,150.395c-2.097-0.35-2.214,3.262-0.933,3.961c1.398,0.816,2.797-1.164,3.729-1.747
+                        c2.795-1.748,7.106-1.515,10.135-0.699c1.515,0.467,3.378,1.864,5.009,1.516c1.515-0.35,2.563-2.564,1.399-4.078
+                        c-1.748-2.097-7.457-1.165-9.903-1.165c-1.864,0-13.165-0.466-10.136,4.077"/>
+                    </g>
+                  </g>
+                </g>
+                </svg>
+              </div>
+              <div id="eyes">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="87.858px" height="14.6px" viewBox="0 0 87.858 14.6" enable-background="new 0 0 87.858 14.6" xml:space="preserve" class="eyes">
+                  <g>
+                    <circle fill="#231F20" cx="6.968" cy="6.967" r="6.968"></circle>
+                    <circle fill="#231F20" cx="80.89" cy="7.631" r="6.968"></circle>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="bl-panel-work-items" class="bl-panel-items">
+          <div data-panel="panel-1">
+            <div>
+              <h3>Noah's Crate </h3>
+              <h3>諾亞的箱子</h3>
+              <p>
+                 
+                擬真動物的展示網站，原型師的辛苦結晶。
+              </p>
+              <p>這是我第一個完全自己刻的網站，中間因為原形師之間對於網站的想法有所變動，所以進度目前是暫停的。</p>
+              <p><a href="http://www.noahscrate.com/" target="_blank">- LINK TO SITE -</a></p><img src="images/1-1.jpg" class="border floatnone">
+            </div>
+          </div>
+          <div data-panel="panel-2">
+            <div>
+              <h3>Fiery Cafe </h3>
+              <h3>火熱咖啡</h3>
+              <p> 老闆用上好的機器，上好的咖啡豆，熱情的招待每一位上門的客人</p>
+              <p> 老闆對自己的美感很有想法，改了網站的部分圖片，在圖上放上了大大的黑體，溝通過了，這是他的藝術。</p>
+              <p><a href="http://fierycafe.com/" target="_blank">- LINK TO SITE -</a></p><img src="images/2-1.jpg" class="border floatnone">
+            </div>
+          </div>
+          <div data-panel="panel-3">
+            <div>
+              <h3>Happy Wedding</h3><img src="images/3-1.jpg" class="border floatnone">
+              <p> 小五與阿龍要結婚了! 網站是codrop的範例，唯獨加了前面婚戒 loading 的動畫</p>
+              <p> "這樣好棒喔，可是一下下就看不到了" </p>
+              <p> "那我不要壓縮圖片好了，這樣就讀很久"</p>
+              <p> 婚紗照是一邊公路旅遊的時候我跟另一位攝影師拍的。</p>
+              <p><a href="http://jiminycricket.github.io/happymerry/" target="_blank">- LINK TO SITE -</a></p><img src="images/3-2.jpg" class="border floatnone">
+            </div>
+          </div>
+          <div data-panel="panel-4">
+            <div>
+              <h3>Change Your Size of View to see.</h3><img src="images/4-1.jpg" class="border floatnone">
+              <p> 這是一個藉由調整視窗，可以重新排列每個小拼圖的網站</p>
+              <p> 不只一種組合</p>
+              <p> 其實做這個是為了測試 sass 跟 slim 變數跟迴圈</p>
+              <p><a href="http://jiminycricket.github.io/change-size-to-see/" target="_blank">- LINK TO SITE -</a></p><img src="images/4-2.jpg" class="border"><img src="images/4-3.jpg" class="border"><img src="images/4-4.jpg" class="border">
+            </div>
+          </div>
+          <div data-panel="panel-5">
+            <div><img src="images/5-1.jpg" class="border floatnone">
+              <h3>totempoles</h3>
+              <p>totempole 是印地安文化的圖騰柱，原住民用這樣的柱子去表達一個故事，可能是稱頌，也可能諷刺。</p>
+              <p>青蛙代表財富跟幸運，抱著小印安人的是一個民族英雄的故事。</p>
+              <p>綠臉的高帽子的，是個騙了印地安人的吝嗇財主。</p>
+              <p>這是一個練習 susy 的網站</p>
+              <p><a href="http://jiminycricket.github.io/totempoles/" target="_blank">- LINK TO SITE -</a></p><img src="images/5-2.jpg" class="border floatnone"><img src="images/5-2.jpg" class="border floatnone">
+            </div>
+          </div>
+          <div data-panel="panel-6">
+            <div>
+              <h3>URL Command</h3>
+              <p> 這是一次黑客松的產品，與國璽，家豪在發想後，一周內完成這個有點自嗨的小東西</p>
+              <p> 使用 meteor, angular 來達到 real time 的資訊呈現。</p>
+              <p> 是一個可以針對 URL 來下評論的 Chrome Extension。</p>
+              <p> 只要在同一網址下，就可以互相交流對當前網址的文章，產品，或是議題發表看法。</p>
+              <p> <a href="https://github.com/cesar2535/URLComment" target="_blank">- LINK TO SITE -</a></p><img src="images/6-1a.jpg" class="border floatnone"><img src="images/6-2a.jpg" class="border floatnone"><img src="images/6-3a.jpg" class="border floatnone">
+            </div>
+          </div>
+          <div data-panel="panel-7">
+            <div>
+              <h3>相逢．何需．相識 </h3>
+              <h3>Treasuring this encounter even though we’re strangers</h3>
+              <iframe src="//player.vimeo.com/video/95157005" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                <p><a href="http://vimeo.com/95157005">相逢．何需．相識 Treasuring this encounter even though we’re strangers</a>from <a href="http://vimeo.com/user1841205">kuang_black</a>on <a href="https://vimeo.com">Vimeo</a></p>
+              </iframe>
+              <p>晨光的電影夢，幸運的可以參與一部分。</p>
+              <p>攝影</p>
+            </div>
+          </div>
+          <div data-panel="panel-8">
+            <div>
+              <h3>2013 年滑雪影展得獎作品</h3>
+              <iframe width="700" height="500" src="//www.youtube.com/embed/WPTspinUUTs?rel=0" frameborder="0" allowfullscreen></iframe>
+              <p>旅行中難忘經驗的紀錄。</p>
+              <p>攝影 / 剪輯 / 後製</p>
+            </div>
+          </div>
+          <div data-panel="panel-9">
+            <div>
+              <h3>第一屆 Red Bull 皂飛車</h3>
+              <div class="clear"><img src="images/9-1.jpg"><img src="images/9-2.jpg"><img src="images/9-3.jpg"><img src="images/9-4.jpg"><img src="images/9-5.jpg"><img src="images/9-6.jpg"></div>
+              <p>我們用手刻了一台皇上龍椅車，才出發就撞車，可是很開心</p>
+              <P><a href="http://youtu.be/IWiVDiHqTNs?t=21s" target="_blank">別人拍的</a></P>
+            </div>
+          </div>
+          <nav><span class="bl-next-work">
+               
+              &gt; Next Project</span><span class="bl-icon bl-icon-close"></span></nav>
+        </div>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\\/script>')</script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <script src="js/app/app.js"></script>
+    <script>
+      $(window).load(function(){
+        console.log("!!!!!!!!!!")
+        $('.preloader').fadeOut(3000);
+        })
+    </script>
+    <script>
+      $(function() {
+        Boxlayout.init();
+      });
+    </script>
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>
