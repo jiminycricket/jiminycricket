@@ -1,10 +1,34 @@
 @import compass
 // @import susy
 
+@import foundation/helpers
 @import foundation/config
 @import foundation/base
-// @import foundation/helpers
 // @import foundation/tools
+
+
+.preloader
+  background-color: rgba(255,255,255,1)
+  z-index: 99999
+  width: 100%
+  height: 100%
+  display: fixed
+  position: absolute
+  .img
+    z-index: 1
+    max-width: 300px
+    margin: 0 auto
+    margin-top: 100px
+    width: 300px
+    height: auto
+    display: block
+    +transition(.3s)
+    // background-color: #FFF
+    @media screen and (max-width: $b-middle)
+      width: 130px
+      margin-top: 30px
+
+
 a
   color: #aaa
   font-size: 1.1em
@@ -47,14 +71,13 @@ img.border.floatnone
       width: 100%
       height: 100%
     .img
-      background-image: url("../images/face.svg")
-      background-size: cover
-
+      // background-image: url("../images/face.svg")
+      // background-size: cover
       position: absolute
       top: 0
       left: 0
       width: 100%
-      padding-top: 100%
+      // padding-top: 100%
       box-sizing: border-box
 #eyes
   position: absolute
@@ -412,3 +435,18 @@ section.bl-expand
   #eyes
     svg
       width: 40px
+
+
+#path-face, #path-hair, #path-glasses, #path-eyes
+  +animation(pathface 3s ease-in forwards)
+
+#path-face, #path-hair
+  stroke-dasharray: 700
+  stroke-dashoffset: 700
+#path-glasses
+  stroke-dasharray: 250
+  stroke-dashoffset: 250
+#path-eyes
+  stroke-dasharray: 1000
+  stroke-dashoffset: 1000
+
